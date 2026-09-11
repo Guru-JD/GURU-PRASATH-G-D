@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --font-heading: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-poppins: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+    --font-inter: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #060813;
+    color: #F8FAFC;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* All Headings using Palatino Linotype for distinguished elegant look */
+  h1, h2, h3, h4, h5, h6, .font-heading, [class*="font-heading"] {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif !important;
+    letter-spacing: -0.01em;
+  }
+
+  /* Reading Content using Plus Jakarta Sans for crisp modern readability */
+  p, blockquote, li, label, input, textarea, div, span, button, a {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Ensure paragraphs have high clarity and comfortable reading contrast */
+  p {
+    color: #E2E8F0;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060813;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+  border: 2px solid #060813;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F2FE;
+}
+
+/* Glassmorphism utility with luxury subtle borders */
+.glass-card {
+  background: rgba(10, 15, 30, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(14, 22, 44, 0.92);
+  border-color: rgba(0, 242, 254, 0.45);
+  box-shadow: 0 20px 50px -10px rgba(0, 242, 254, 0.22), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Section Ambient Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 242, 254, 0.4) 30%, rgba(99, 102, 241, 0.4) 70%, transparent 100%);
+}
+
+/* Glowing Border Effect */
+.glow-cyan {
+  box-shadow: 0 0 25px -3px rgba(0, 242, 254, 0.45);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -3px rgba(168, 85, 247, 0.45);
+}
+
+.glow-rose {
+  box-shadow: 0 0 25px -3px rgba(244, 63, 94, 0.45);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 25px -3px rgba(99, 102, 241, 0.45);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -3px rgba(16, 185, 129, 0.45);
+}
+
+/* High-Impact Vibrant Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #38BDF8 35%, #818CF8 70%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #E0F2FE 0%, #38BDF8 40%, #00F2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #F3E8FF 0%, #C084FC 45%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-indigo {
+  background: linear-gradient(135deg, #E0E7FF 0%, #818CF8 50%, #6366F1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background Grid Pattern with glowing cyber feel */
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.8deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Noise overlay */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* Print Styles for PDF / Print Output */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #official-resume-document, #official-resume-document * {
+    visibility: visible;
+  }
+  #official-resume-document {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    z-index: 999999;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
